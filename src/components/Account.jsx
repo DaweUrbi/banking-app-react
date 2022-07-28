@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { StyledForm, StyledFormField } from './styles/Form.styles';
+import { StyledForm } from './styles/Form.styles';
 import { StyledButton } from './styles/Button.styles';
 
 export default function Account(props) {
@@ -68,10 +68,11 @@ export default function Account(props) {
     <section>
       <StyledForm onSubmit={handleSubmit}>
         <h2>New Account</h2>
-          <StyledFormField>
+        <div>
             <label htmlFor='accountNameInput'>Account Name:</label>
             <input value={accountName} onChange={handleInputChange} />
-          </StyledFormField>
+        </div>
+
           <StyledButton>Add new account</StyledButton>
       <ul>
         {accounts.map((account) => (
