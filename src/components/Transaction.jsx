@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import Category from './Category';
 import { StyledButton } from './styles/Button.styles';
 import { StyledSection } from './styles/Section.styles';
+import { StyledForm } from './styles/Form.styles';
 
 export default function Transaction(props) {
   const { setTransactions, transactions, accounts } = props;
@@ -97,7 +98,7 @@ export default function Transaction(props) {
     <section>
       <StyledSection>
       <h2>New Transaction Form</h2>
-      <form onSubmit={handleSubmit}>
+      <StyledForm onSubmit={handleSubmit}>
         <div onChange={handleRadioChange}>
           <input type='radio' name='type' value={'Deposit'} /> Deposit
           <input type='radio' name='type' value={'Withdrawal'} /> Withdrawal
@@ -127,7 +128,7 @@ export default function Transaction(props) {
           <input type='number' name='amount' onChange={handleChange} required />
         </div>
         <StyledButton>Add Transaction</StyledButton>
-      </form>
+      </StyledForm>
       </StyledSection>
     </section>
   );

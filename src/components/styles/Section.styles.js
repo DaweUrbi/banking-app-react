@@ -11,6 +11,16 @@ h2 {
   padding: 0.2rem;
  }
 
+ label { 
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+}
 
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 
 `;
+

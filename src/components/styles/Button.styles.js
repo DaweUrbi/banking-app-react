@@ -26,6 +26,7 @@ export const StyledButton = styled.button`
   font-size: 1rem;
   width: 15%;
   align-self: center;
+  margin: 0.5rem;
 
 `;
 
